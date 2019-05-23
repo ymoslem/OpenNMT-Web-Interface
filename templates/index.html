@@ -1,0 +1,70 @@
+<html>
+<head>
+{{ pagedown.include_pagedown() }}
+<style>
+.flask-pagedown-input {
+}
+.flask-pagedown-preview {
+    border: 1px dotted black;
+    background-color: #f0f0f0;
+}
+body {
+  border-radius: 5px;
+  background-color: #FDFDFD;
+  padding: 20px;
+}
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+.textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size:90%;
+}
+.button {
+  font-size:100%;
+  cursor: pointer;
+}
+</style>
+<title>MT</title>
+</head>
+<body>
+    <div class="content" style="width: 500px;">
+        <h1 background-color: #FCFCFC;>MT Demo</h1>
+        <hr>
+        <br>
+        <form method="POST">
+        <div style="text-align:center;">
+        <label>Language</label>
+        <select id="lang" name="lang">
+            <option value="en-fr">English-French</option>
+            <option value="fr-en" {% if language == "fr-en"%} selected {% endif %}>French-English</option>
+        </select>
+
+
+            {{ form.hidden_tag() }}
+            <div>
+                <p>{{ form.pagedown.label }}</p>
+                {{ form.pagedown(only_input=True, rows=10, class="textarea", style='width:100%') }}
+            </div>
+            <br>
+            <div>{{ form.submit(class="button") }}</div>
+        </form>
+        {% if text %}
+
+        <hr>
+
+        <div>
+            <p>Translation</p>
+            <div class="textarea">{{ text }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
