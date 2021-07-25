@@ -9,3 +9,7 @@ If you are rather looking for a stand-alone excutive GUI for Windows, check my b
 ## Live Demo
 You can find a live implementation of this web interface at:
 https://machinetranslation.io/
+
+## [NEW] CTranslate2 Web Interface
+
+Now, it is highly recommended to use [CTranslate2](https://github.com/OpenNMT/CTranslate2) for serving your models due to its high performance. You can use the new web interface version using CTranslate2 and Streamlit. Check the new [NMT web interface here](https://github.com/ymoslem/CTranslate-NMT-Web-Interface).
