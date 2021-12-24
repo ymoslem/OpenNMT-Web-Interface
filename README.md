@@ -1,4 +1,4 @@
-# OpenNMT-GUI
+# OpenNMT-Web-Interface
 Machine Translation Web Interface for OpenNMT
 
 ## Description
